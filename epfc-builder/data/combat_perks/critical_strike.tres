@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://q5121u00ging"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_gkdww"]
+[ext_resource type="Texture2D" uid="uid://bx2hk84oj02d3" path="res://assets/icons/combat/cs_selected.png" id="2_t0m1n"]
+[ext_resource type="Texture2D" uid="uid://ckx4i38cr887g" path="res://assets/icons/combat/cs_similar.png" id="3_rf84v"]
+[ext_resource type="Texture2D" uid="uid://balondka6x46c" path="res://assets/icons/combat/cs_unselected.png" id="3_rvypi"]
+
+[resource]
+script = ExtResource("1_gkdww")
+id = &"critical_strike"
+display_name = "Critical Strike"
+unselected_icon = ExtResource("3_rvypi")
+selected_icon = ExtResource("2_t0m1n")
+similar_icon = ExtResource("3_rf84v")

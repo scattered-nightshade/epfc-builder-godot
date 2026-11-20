@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://1xrsltxf7qta"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_tnrrb"]
+[ext_resource type="Texture2D" uid="uid://0mlp8of1d6an" path="res://assets/icons/skills/ea_selected.png" id="2_jvti6"]
+[ext_resource type="Texture2D" uid="uid://dorla6kvl5udm" path="res://assets/icons/skills/ea_similar.png" id="3_s51bp"]
+[ext_resource type="Texture2D" uid="uid://0p3px6n4mier" path="res://assets/icons/skills/ea_unselected.png" id="4_5e5ge"]
+
+[resource]
+script = ExtResource("1_tnrrb")
+id = &"efficient_algorithms"
+display_name = "Efficient Algorithms"
+description = "Hacks deploy 5% faster per rank."
+unselected_icon = ExtResource("4_5e5ge")
+selected_icon = ExtResource("2_jvti6")
+similar_icon = ExtResource("3_s51bp")
+stat_bonuses = Dictionary[StringName, float]({
+&"efficient_algorithms_hack_deploy_speed_increase": 5.0
+})

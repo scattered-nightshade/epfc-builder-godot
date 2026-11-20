@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://4p6yekobrqy4"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_d0aaj"]
+[ext_resource type="Texture2D" uid="uid://4kgpjc17r2rw" path="res://assets/icons/skills/sd_selected.png" id="2_h7omf"]
+[ext_resource type="Texture2D" uid="uid://1vpbas2ibkmr" path="res://assets/icons/skills/sd_similar.png" id="3_nl68a"]
+[ext_resource type="Texture2D" uid="uid://bt8vu2eihebx2" path="res://assets/icons/skills/sd_unselected.png" id="4_cugwc"]
+
+[resource]
+script = ExtResource("1_d0aaj")
+id = "sd"
+display_name = "Signal Disruption"
+unselected_icon = ExtResource("4_cugwc")
+selected_icon = ExtResource("2_h7omf")
+similar_icon = ExtResource("3_nl68a")

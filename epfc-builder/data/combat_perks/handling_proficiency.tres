@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://cfw2pcmfrvpjj"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_6fnlv"]
+[ext_resource type="Texture2D" uid="uid://qsv3x16k5gc" path="res://assets/icons/combat/hp_selected.png" id="2_bhpfu"]
+[ext_resource type="Texture2D" uid="uid://ckh60dbfivj2w" path="res://assets/icons/combat/hp_unselected.png" id="3_5fatt"]
+[ext_resource type="Texture2D" uid="uid://ceb163c17jgsd" path="res://assets/icons/combat/hp_similar.png" id="3_pe0wt"]
+
+[resource]
+script = ExtResource("1_6fnlv")
+id = &"handling_proficiency"
+display_name = "Handling Proficiency"
+unselected_icon = ExtResource("3_5fatt")
+selected_icon = ExtResource("2_bhpfu")
+similar_icon = ExtResource("3_pe0wt")

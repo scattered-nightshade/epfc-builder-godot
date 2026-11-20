@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://kibm6qfgr54c"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_q5kef"]
+[ext_resource type="Texture2D" uid="uid://cqapc6dakf6c" path="res://assets/icons/combat/ar_selected.png" id="2_m7kow"]
+[ext_resource type="Texture2D" uid="uid://bkbfxbe530so5" path="res://assets/icons/combat/ar_similar.png" id="3_binxx"]
+[ext_resource type="Texture2D" uid="uid://c401lj1j7e1m" path="res://assets/icons/combat/ar_unselected.png" id="3_yy3ir"]
+
+[resource]
+script = ExtResource("1_q5kef")
+id = &"ammo_reserves"
+display_name = "Ammo Reserves"
+unselected_icon = ExtResource("3_yy3ir")
+selected_icon = ExtResource("2_m7kow")
+similar_icon = ExtResource("3_binxx")

@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://ch5hj8bkal41x"]
+
+[ext_resource type="Script" uid="uid://brn0yie6gx8k3" path="res://app/main.gd" id="1_i37im"]
+[ext_resource type="Script" uid="uid://db025j5i4ujdg" path="res://app/skill_web_container.gd" id="1_tnehs"]
+[ext_resource type="PackedScene" uid="uid://clfncg2uxipmt" path="res://app/skill_web/skill_web.tscn" id="1_ysqge"]
+[ext_resource type="PackedScene" uid="uid://cyh7nux4im0d4" path="res://app/stats_panel/stats_panel.tscn" id="2_8bux2"]
+[ext_resource type="Material" uid="uid://dim26piuwvyut" path="res://assets/materials/blur.tres" id="2_o47ap"]
+[ext_resource type="PackedScene" uid="uid://dj05a0kilf7ef" path="res://app/combat_tree/combat_tree.tscn" id="2_vw08i"]
+[ext_resource type="Texture2D" uid="uid://uu8c4h2afjjg" path="res://assets/backgrounds/auction.png" id="3_d28lo"]
+[ext_resource type="PackedScene" uid="uid://c5ypkte2y7dat" path="res://app/inventory/inventory.tscn" id="3_tnehs"]
+[ext_resource type="PackedScene" uid="uid://cc8aor1cklyhf" path="res://app/advanced_planning/advanced_planning.tscn" id="3_vw08i"]
+[ext_resource type="Texture2D" uid="uid://bekoofi73guhs" path="res://icon.svg" id="5_kqegv"]
+[ext_resource type="PackedScene" uid="uid://cip8vssd26ikp" path="res://app/skill_points_container/skill_points_container.tscn" id="11_kqegv"]
+
+[node name="Main" type="HBoxContainer" unique_id=1389817493]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i37im")
+
+[node name="MainContentContainer" type="TabContainer" parent="." unique_id=1097611639]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+current_tab = 0
+tab_0/title = "Skill Web"
+tab_1/title = "Combat Tree"
+
+[node name="SkillWebContainer" type="Control" parent="MainContentContainer" unique_id=893640776]
+clip_contents = true
+layout_mode = 2
+script = ExtResource("1_tnehs")
+metadata/_tab_index = 0
+metadata/_tab_name = "Skill Web"
+
+[node name="TextureRect" type="TextureRect" parent="MainContentContainer/SkillWebContainer" unique_id=1116730236]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_d28lo")
+
+[node name="Blur" type="TextureRect" parent="MainContentContainer/SkillWebContainer" unique_id=220530286]
+material = ExtResource("2_o47ap")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kqegv")
+
+[node name="SkillWeb" parent="MainContentContainer/SkillWebContainer" unique_id=310057034 instance=ExtResource("1_ysqge")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CombatTreeContainer" type="Control" parent="MainContentContainer" unique_id=1947927599]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Combat Tree"
+
+[node name="TextureRect2" type="TextureRect" parent="MainContentContainer/CombatTreeContainer" unique_id=1499238864]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_d28lo")
+
+[node name="Blur2" type="TextureRect" parent="MainContentContainer/CombatTreeContainer" unique_id=755123442]
+material = ExtResource("2_o47ap")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kqegv")
+
+[node name="CombatTree" parent="MainContentContainer/CombatTreeContainer" unique_id=874514684 instance=ExtResource("2_vw08i")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Inventory" parent="MainContentContainer" unique_id=411461851 instance=ExtResource("3_tnehs")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="SidePanel" type="VBoxContainer" parent="." unique_id=146151339]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Information" type="TabContainer" parent="SidePanel" unique_id=1150494281]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+current_tab = 0
+tab_0/title = "Stats Panel"
+tab_1/title = "Advanced Planning"
+
+[node name="StatsPanel" parent="SidePanel/Information" unique_id=87978847 instance=ExtResource("2_8bux2")]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Stats Panel"
+
+[node name="AdvancedPlanning" parent="SidePanel/Information" unique_id=854926922 instance=ExtResource("3_vw08i")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Advanced Planning"
+
+[node name="ButtonContainer" type="PanelContainer" parent="SidePanel" unique_id=360140957]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SidePanel/ButtonContainer" unique_id=1729454894]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HFlowContainer" parent="SidePanel/ButtonContainer/MarginContainer" unique_id=969070263]
+layout_mode = 2
+
+[node name="ResetSkillWebButton" type="Button" parent="SidePanel/ButtonContainer/MarginContainer/HBoxContainer" unique_id=572805892]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Skill Web"
+
+[node name="ResetCombatTreeButton" type="Button" parent="SidePanel/ButtonContainer/MarginContainer/HBoxContainer" unique_id=122345120]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Combat Tree"
+
+[node name="ResetInventoryButton" type="Button" parent="SidePanel/ButtonContainer/MarginContainer/HBoxContainer" unique_id=1328479008]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Inventory"
+
+[node name="ResetAllButton" type="Button" parent="SidePanel/ButtonContainer/MarginContainer/HBoxContainer" unique_id=1870057837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Everything"
+
+[node name="SkillPointsContainer" parent="SidePanel" unique_id=778341133 instance=ExtResource("11_kqegv")]
+layout_mode = 2

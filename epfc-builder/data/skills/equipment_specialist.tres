@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://lpp181uvrq4f"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_6gdmh"]
+[ext_resource type="Texture2D" uid="uid://cyqxyu0tacq1u" path="res://assets/icons/skills/es_selected.png" id="2_27gjc"]
+[ext_resource type="Texture2D" uid="uid://dydw2g82fpt18" path="res://assets/icons/skills/es_similar.png" id="3_ivk20"]
+[ext_resource type="Texture2D" uid="uid://cc83jhkikaxi2" path="res://assets/icons/skills/es_unselected.png" id="4_wsd5r"]
+
+[resource]
+script = ExtResource("1_6gdmh")
+id = &"equipment_specialist"
+display_name = "Equipment Specialist"
+description = "- Rank 1: Tech tools and the Hacking Tablet cost 50% less in loadouts.
+- Rank 2: Two extra space available in loadouts.
+- Rank 3: Allows you to use two item mods instead of one."
+major_skill = true
+unselected_icon = ExtResource("4_wsd5r")
+selected_icon = ExtResource("2_27gjc")
+similar_icon = ExtResource("3_ivk20")
+rank_bonuses = Dictionary[int, StringName]({
+0: &"equipment_specialist_1",
+1: &"equipment_specialist_2",
+2: &"equipment_specialist_3"
+})

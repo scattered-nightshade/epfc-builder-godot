@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://bgn1u1qfqjs0b"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_birl8"]
+[ext_resource type="Texture2D" uid="uid://biurkdiauy43l" path="res://assets/icons/combat/fc_selected.png" id="2_ai778"]
+[ext_resource type="Texture2D" uid="uid://thdkxk00aunt" path="res://assets/icons/combat/fc_unselected.png" id="3_dvluw"]
+[ext_resource type="Texture2D" uid="uid://ddvwf7le66v3w" path="res://assets/icons/combat/fc_similar.png" id="3_std5l"]
+
+[resource]
+script = ExtResource("1_birl8")
+id = &"fire_control"
+display_name = "Fire Control"
+unselected_icon = ExtResource("3_dvluw")
+selected_icon = ExtResource("2_ai778")
+similar_icon = ExtResource("3_std5l")

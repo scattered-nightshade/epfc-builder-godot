@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://cr67hmw7usosy"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_s26kp"]
+[ext_resource type="Texture2D" uid="uid://4w0dlxy3tss5" path="res://assets/icons/combat/gs_selected.png" id="2_1ybyd"]
+[ext_resource type="Texture2D" uid="uid://cbcsnvn7lavk6" path="res://assets/icons/combat/gs_similar.png" id="3_3emyj"]
+[ext_resource type="Texture2D" uid="uid://u8a6aeob374y" path="res://assets/icons/combat/gs_unselected.png" id="3_bbkds"]
+
+[resource]
+script = ExtResource("1_s26kp")
+id = &"gunsmith"
+display_name = "Gunsmith"
+unselected_icon = ExtResource("3_bbkds")
+selected_icon = ExtResource("2_1ybyd")
+similar_icon = ExtResource("3_3emyj")

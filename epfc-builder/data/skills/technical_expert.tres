@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://dnysx3fv01j6a"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_0gwjc"]
+[ext_resource type="Texture2D" uid="uid://b86oo13sh3nyx" path="res://assets/icons/skills/te_selected.png" id="2_ek2yu"]
+[ext_resource type="Texture2D" uid="uid://c4hr5ffrls0vm" path="res://assets/icons/skills/te_similar.png" id="3_mvaxm"]
+[ext_resource type="Texture2D" uid="uid://s0mi06eqqppu" path="res://assets/icons/skills/te_unselected.png" id="4_pq3bj"]
+
+[resource]
+script = ExtResource("1_0gwjc")
+id = "te"
+display_name = "Technical Expert"
+unselected_icon = ExtResource("4_pq3bj")
+selected_icon = ExtResource("2_ek2yu")
+similar_icon = ExtResource("3_mvaxm")

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://dn1ku7t46wbod"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_40v3j"]
+[ext_resource type="Texture2D" uid="uid://b0wtojdxldx0i" path="res://assets/icons/skills/cond_selected.png" id="2_peaxc"]
+[ext_resource type="Texture2D" uid="uid://cgixrt17ntknw" path="res://assets/icons/skills/cond_similar.png" id="3_gvakf"]
+[ext_resource type="Texture2D" uid="uid://bn63e6smbk7ws" path="res://assets/icons/skills/cond_unselected.png" id="4_j5ya6"]
+
+[resource]
+script = ExtResource("1_40v3j")
+id = &"conditioning"
+display_name = "Conditioning"
+description = "Increases maximum stamina by 6% and stamina regeneration speed by 3% per rank."
+unselected_icon = ExtResource("4_j5ya6")
+selected_icon = ExtResource("2_peaxc")
+similar_icon = ExtResource("3_gvakf")
+stat_bonuses = Dictionary[StringName, float]({
+&"conditioning_stamina_increase": 6.0,
+&"conditioning_stamina_regeneration_speed_increase": 3.0
+})

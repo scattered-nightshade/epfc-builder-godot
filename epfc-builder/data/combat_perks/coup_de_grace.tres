@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://ds0gd7mwls41x"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_51lro"]
+[ext_resource type="Texture2D" uid="uid://j5w50r80jcdu" path="res://assets/icons/combat/cdg_selected.png" id="2_58tb4"]
+[ext_resource type="Texture2D" uid="uid://bprbm6dgt3p4m" path="res://assets/icons/combat/cdg_similar.png" id="3_rcocm"]
+[ext_resource type="Texture2D" uid="uid://clbmvoxux475n" path="res://assets/icons/combat/cdg_unselected.png" id="3_w5p3f"]
+
+[resource]
+script = ExtResource("1_51lro")
+id = &"coup_de_grace"
+display_name = "Coup de Grace"
+unselected_icon = ExtResource("3_w5p3f")
+selected_icon = ExtResource("2_58tb4")
+similar_icon = ExtResource("3_rcocm")

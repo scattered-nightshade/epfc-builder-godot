@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://bi4fo3gfvpqjo"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_fr33c"]
+[ext_resource type="Texture2D" uid="uid://cf8t4cede6kmf" path="res://assets/icons/skills/ap_selected.png" id="2_oelha"]
+[ext_resource type="Texture2D" uid="uid://dygrj5ptu4uf2" path="res://assets/icons/skills/ap_similar.png" id="3_bs8jh"]
+[ext_resource type="Texture2D" uid="uid://buaoho6vorwef" path="res://assets/icons/skills/ap_unselected.png" id="4_n88wv"]
+
+[resource]
+script = ExtResource("1_fr33c")
+id = &"advanced_protocols"
+display_name = "Advanced Protocols"
+major_skill = true
+unselected_icon = ExtResource("4_n88wv")
+selected_icon = ExtResource("2_oelha")
+similar_icon = ExtResource("3_bs8jh")
+rank_bonuses = Dictionary[int, StringName]({
+0: &"advanced_protocols_1",
+1: &"advanced_protocols_2",
+2: &"advanced_protocols_3"
+})

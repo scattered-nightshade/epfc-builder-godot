@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://54iqe7wrc74g"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_s33cj"]
+[ext_resource type="Texture2D" uid="uid://d1x1pn0opipwq" path="res://assets/icons/skills/fh_selected.png" id="2_40kvb"]
+[ext_resource type="Texture2D" uid="uid://cq50kojykjjcu" path="res://assets/icons/skills/fh_similar.png" id="3_pp6vm"]
+[ext_resource type="Texture2D" uid="uid://b4ypsb8hyo50" path="res://assets/icons/skills/fh_unselected.png" id="4_h7d1c"]
+
+[resource]
+script = ExtResource("1_s33cj")
+id = "fh"
+display_name = "Fast Hands"
+unselected_icon = ExtResource("4_h7d1c")
+selected_icon = ExtResource("2_40kvb")
+similar_icon = ExtResource("3_pp6vm")

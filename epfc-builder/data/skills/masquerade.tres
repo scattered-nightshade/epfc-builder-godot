@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://dt1od2278m6m8"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_o4f1k"]
+[ext_resource type="Texture2D" uid="uid://bxq1bwxjmmpq" path="res://assets/icons/skills/mas_selected.png" id="2_2gatf"]
+[ext_resource type="Texture2D" uid="uid://khpoq0do3ghk" path="res://assets/icons/skills/mas_similar.png" id="3_deiq2"]
+[ext_resource type="Texture2D" uid="uid://b0wxp7s1hja2u" path="res://assets/icons/skills/mas_unselected.png" id="4_d6psu"]
+
+[resource]
+script = ExtResource("1_o4f1k")
+id = "mas"
+display_name = "Masquerade"
+unselected_icon = ExtResource("4_d6psu")
+selected_icon = ExtResource("2_2gatf")
+similar_icon = ExtResource("3_deiq2")

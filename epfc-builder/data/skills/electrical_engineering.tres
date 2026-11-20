@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://c5vpe3a3j10ik"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_rr0wt"]
+[ext_resource type="Texture2D" uid="uid://bgk80cpscvko0" path="res://assets/icons/skills/ee_selected.png" id="2_xsu2w"]
+[ext_resource type="Texture2D" uid="uid://nvegokv0ojpa" path="res://assets/icons/skills/ee_similar.png" id="3_ciibb"]
+[ext_resource type="Texture2D" uid="uid://dejs8nhutugjf" path="res://assets/icons/skills/ee_unselected.png" id="4_gs6cw"]
+
+[resource]
+script = ExtResource("1_rr0wt")
+id = &"electrical_engineering"
+display_name = "Electrical Engineering"
+description = "- Rank 1: Unlocks the Rewire Kit, used to bypass certain electronic security measures.
+- Rank 2: Allows the player to overload power boxes. Overloading a power box will destroy it but will not cause a \"Power Unrestored\" alert level increase if reported. Also unlocks the EMP, which can destroy nearby electronics.
+- Rank 3: The Rewire Kit can be used on more advanced and uncommon security measures."
+major_skill = true
+unselected_icon = ExtResource("4_gs6cw")
+selected_icon = ExtResource("2_xsu2w")
+similar_icon = ExtResource("3_ciibb")
+rank_bonuses = Dictionary[int, StringName]({
+0: &"electrical_engineering_1",
+1: &"electrical_engineering_2",
+2: &"electrical_engineering_3"
+})

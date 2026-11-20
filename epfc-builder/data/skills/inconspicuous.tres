@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://uld5m28dp000"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_jmp7s"]
+[ext_resource type="Texture2D" uid="uid://dwfdx1cdgrbpm" path="res://assets/icons/skills/incon_selected.png" id="2_a12jp"]
+[ext_resource type="Texture2D" uid="uid://250v2rafa2kh" path="res://assets/icons/skills/incon_similar.png" id="3_kb73v"]
+[ext_resource type="Texture2D" uid="uid://c8qel371gc4or" path="res://assets/icons/skills/incon_unselected.png" id="4_eotb6"]
+
+[resource]
+script = ExtResource("1_jmp7s")
+id = "incon"
+display_name = "Inconspicuous"
+major_skill = true
+unselected_icon = ExtResource("4_eotb6")
+selected_icon = ExtResource("2_a12jp")
+similar_icon = ExtResource("3_kb73v")

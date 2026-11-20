@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://dfqacgqf4c4q7"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_0gqis"]
+[ext_resource type="Texture2D" uid="uid://cbhfxggs7y82t" path="res://assets/icons/combat/re_selected.png" id="2_ofmtr"]
+[ext_resource type="Texture2D" uid="uid://c8xgd06iph0jh" path="res://assets/icons/combat/re_similar.png" id="3_61m6i"]
+[ext_resource type="Texture2D" uid="uid://bxmcpcvxxfjn5" path="res://assets/icons/combat/re_unselected.png" id="3_h74ks"]
+
+[resource]
+script = ExtResource("1_0gqis")
+id = &"reinforcement"
+display_name = "Reinforcement"
+unselected_icon = ExtResource("3_h74ks")
+selected_icon = ExtResource("2_ofmtr")
+similar_icon = ExtResource("3_61m6i")

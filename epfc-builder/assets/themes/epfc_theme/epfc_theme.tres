@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dyx0hbo6qu771"]
+
+[ext_resource type="StyleBox" uid="uid://b60lvdivmvee7" path="res://assets/themes/epfc_theme/panel/light_panel.tres" id="1_4xsm7"]
+[ext_resource type="FontFile" uid="uid://c7juq3plc81o" path="res://assets/fonts/zekton/Zekton-Regular.otf" id="1_epuhk"]
+[ext_resource type="StyleBox" uid="uid://dmonf5ors6wn2" path="res://assets/themes/epfc_theme/panel/dark_panel.tres" id="1_iixb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iixb5"]
+
+[resource]
+default_font = ExtResource("1_epuhk")
+default_font_size = 24
+Button/colors/font_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+Button/colors/font_focus_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+Button/colors/font_hover_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+Button/colors/font_pressed_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_iixb5")
+Button/styles/hover = ExtResource("1_4xsm7")
+Button/styles/normal = ExtResource("1_4xsm7")
+Button/styles/pressed = ExtResource("1_4xsm7")
+DarkButton/base_type = &"Button"
+DarkButton/colors/font_color = Color(1, 1, 1, 1)
+DarkButton/colors/font_focus_color = Color(1, 1, 1, 1)
+DarkButton/colors/font_hover_color = Color(1, 1, 1, 1)
+DarkButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+DarkButton/styles/normal = ExtResource("1_iixb5")
+PanelContainer/styles/panel = ExtResource("1_iixb5")
+TabContainer/constants/side_margin = 0
+TabContainer/styles/panel = ExtResource("1_iixb5")

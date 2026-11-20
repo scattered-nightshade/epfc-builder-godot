@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://blynvqbfws6mf"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_c50qc"]
+[ext_resource type="Texture2D" uid="uid://bfw3xr3yirnrb" path="res://assets/icons/combat/ma_selected.png" id="2_tijks"]
+[ext_resource type="Texture2D" uid="uid://lcwqhjdb2vmu" path="res://assets/icons/combat/ma_similar.png" id="3_7otal"]
+[ext_resource type="Texture2D" uid="uid://c3h30xcwpxhxk" path="res://assets/icons/combat/ma_unselected.png" id="3_ljw72"]
+
+[resource]
+script = ExtResource("1_c50qc")
+id = &"mobile_attacker"
+display_name = "Mobile Attacker"
+unselected_icon = ExtResource("3_ljw72")
+selected_icon = ExtResource("2_tijks")
+similar_icon = ExtResource("3_7otal")

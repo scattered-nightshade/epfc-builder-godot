@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://boocrbyg1mypm"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_u4igf"]
+[ext_resource type="Texture2D" uid="uid://bt0vsshx5mmka" path="res://assets/icons/combat/rc_selected.png" id="2_7vr5r"]
+[ext_resource type="Texture2D" uid="uid://cxt8scscg4yk8" path="res://assets/icons/combat/rc_unselected.png" id="3_8k6nf"]
+[ext_resource type="Texture2D" uid="uid://ds87wv2p5kxkr" path="res://assets/icons/combat/rc_similar.png" id="3_iltn8"]
+
+[resource]
+script = ExtResource("1_u4igf")
+id = &"refined_composition"
+display_name = "Refined Composition"
+unselected_icon = ExtResource("3_8k6nf")
+selected_icon = ExtResource("2_7vr5r")
+similar_icon = ExtResource("3_iltn8")

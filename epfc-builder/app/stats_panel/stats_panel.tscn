@@ -1,0 +1,531 @@
+[gd_scene format=3 uid="uid://cyh7nux4im0d4"]
+
+[ext_resource type="Script" uid="uid://duq6sebc4sg5w" path="res://app/stats_panel/stats_panel.gd" id="1_hk46d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj63m"]
+bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hk46d"]
+bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p67ue"]
+bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rv1xc"]
+bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="StatsPanel" type="MarginContainer" unique_id=56578930]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_hk46d")
+metadata/_custom_type_script = "uid://duq6sebc4sg5w"
+
+[node name="ScrollRect" type="ScrollContainer" parent="." unique_id=720461559]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect" unique_id=616696759]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HealthContainer" type="HBoxContainer" parent="ScrollRect/VBoxContainer" unique_id=882873941]
+layout_mode = 2
+
+[node name="HealthTitle" type="Label" parent="ScrollRect/VBoxContainer/HealthContainer" unique_id=1323741271]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "Health:"
+
+[node name="HealthValue" type="Label" parent="ScrollRect/VBoxContainer/HealthContainer" unique_id=335385391]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "100"
+horizontal_alignment = 2
+
+[node name="StaminaContainer" type="HBoxContainer" parent="ScrollRect/VBoxContainer" unique_id=518827018]
+layout_mode = 2
+
+[node name="StaminaTitle" type="Label" parent="ScrollRect/VBoxContainer/StaminaContainer" unique_id=1396508035]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "Stamina:"
+
+[node name="StaminaValue" type="Label" parent="ScrollRect/VBoxContainer/StaminaContainer" unique_id=1844376274]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "100"
+horizontal_alignment = 2
+
+[node name="WeightContainer" type="HBoxContainer" parent="ScrollRect/VBoxContainer" unique_id=956178489]
+layout_mode = 2
+
+[node name="WeightTitle" type="Label" parent="ScrollRect/VBoxContainer/WeightContainer" unique_id=1944174640]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "Weight:"
+
+[node name="WeightValue" type="Label" parent="ScrollRect/VBoxContainer/WeightContainer" unique_id=415547239]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+text = "100"
+horizontal_alignment = 2
+
+[node name="SpeedTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=597470171]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/SpeedTable" unique_id=2065300029]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj63m")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer" unique_id=896690923]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer" unique_id=471168947]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=64343283]
+layout_mode = 2
+text = "Speed"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=1441566677]
+layout_mode = 2
+columns = 2
+
+[node name="WalkingTitle" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1990870025]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Walking"
+
+[node name="WalkingValue" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1429179956]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "14 studs/s"
+horizontal_alignment = 2
+
+[node name="SprintingTitle" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=745487540]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sprinting"
+
+[node name="SprintingValue" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=750667304]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "22 studs/s"
+horizontal_alignment = 2
+
+[node name="CrouchWalkingTitle" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2036627062]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crouch Walking"
+
+[node name="CrouchWalkingValue" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1235691707]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "9.5 studs/s"
+horizontal_alignment = 2
+
+[node name="CrouchSprintingTitle" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=61033374]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crouch Sprinting"
+
+[node name="CrouchSprintingValue" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2076242564]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "14.7 studs/s"
+horizontal_alignment = 2
+
+[node name="SlidingTitle" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=119811570]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sliding"
+
+[node name="SlidingValue" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=61474566]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "22 studs/s"
+horizontal_alignment = 2
+
+[node name="DodgeTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=2120266573]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DodgeTable" unique_id=19850212]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj63m")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer" unique_id=2072633291]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer" unique_id=1317952721]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=579641948]
+layout_mode = 2
+text = "Dodge"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=1840071178]
+layout_mode = 2
+columns = 2
+
+[node name="DodgeCrouchingTitle" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=662860832]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crouching"
+
+[node name="DodgeCrouchingValue" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=674256218]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="DodgeSprintingTitle" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=750779382]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sprinting"
+
+[node name="DodgeSprintingValue" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1255865143]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0%"
+horizontal_alignment = 2
+
+[node name="ItemSpeedTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=1652559179]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/ItemSpeedTable" unique_id=893846478]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj63m")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer" unique_id=590463099]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer" unique_id=1675286016]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=2014517168]
+layout_mode = 2
+text = "Item Speed"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=317272863]
+layout_mode = 2
+columns = 2
+
+[node name="ItemLockpickingTitle" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=592374208]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lockpicking"
+
+[node name="ItemLockpickingValue" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=474888674]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 2
+
+[node name="ItemAFTitle" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2115420766]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Saw/Drill/Prybar"
+
+[node name="ItemAFValue" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1422158676]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 2
+
+[node name="ItemRewireKitTitle" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=414533584]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rewire Kit"
+
+[node name="ItemRewireKitValue" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=202803627]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 2
+
+[node name="HackingTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=2012868504]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/HackingTable" unique_id=2047951253]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hk46d")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer" unique_id=275718566]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer" unique_id=319423764]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=757451134]
+layout_mode = 2
+text = "Hacking"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=1021050667]
+layout_mode = 2
+columns = 2
+
+[node name="HackingSpeedTitle" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=952242806]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Speed"
+
+[node name="HackingSpeedValue" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2109003316]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 2
+
+[node name="HackingResourceUsageTitle" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1578045391]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resource Usage"
+
+[node name="HackingResourceUsageValue" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1836474746]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100%"
+horizontal_alignment = 2
+
+[node name="DetectionSpeedTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=1802540040]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable" unique_id=804767846]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p67ue")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer" unique_id=942982709]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer" unique_id=4886504]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=698583805]
+layout_mode = 2
+text = "Detection Speed"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=51931862]
+layout_mode = 2
+columns = 2
+
+[node name="DetectionBaseTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=509351095]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Base"
+
+[node name="DetectionBaseValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=462978706]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
+[node name="DetectionCrouchedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1168204309]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crouched"
+
+[node name="DetectionCrouchedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1047639964]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
+[node name="DetectionCriminallySuspiciousTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=432707855]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Criminally Suspicious"
+
+[node name="DetectionCriminallySuspiciousValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=727332450]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
+[node name="DetectionArmedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1524014965]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Armed"
+
+[node name="DetectionArmedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=131011219]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
+[node name="DetectionDisguisedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=737421531]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disguised"
+
+[node name="DetectionDisguisedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=655304983]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
+[node name="DetectionRangeTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=1515711732]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable" unique_id=2010866797]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rv1xc")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer" unique_id=1229309582]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer" unique_id=1946059724]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=2088654375]
+layout_mode = 2
+text = "Detection Distance"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=634249003]
+layout_mode = 2
+columns = 2
+
+[node name="DetectionDistanceBaseTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=341464622]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Base"
+
+[node name="DetectionDistanceBaseValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=896176863]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 studs"
+horizontal_alignment = 2
+
+[node name="DetectionDistanceCrouchedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1793725485]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crouched"
+
+[node name="DetectionDistanceCrouchedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=978144516]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 studs"
+horizontal_alignment = 2
+
+[node name="DetectionDistanceDisguisedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2117900856]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disguised"
+
+[node name="DetectionDistanceDisguisedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=190960345]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 studs"
+horizontal_alignment = 2
+
+[node name="DetectionDistancePickpocketingTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=731349103]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pickpocketing"
+
+[node name="DetectionDistancePickpocketingValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2085253767]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 studs"
+horizontal_alignment = 2

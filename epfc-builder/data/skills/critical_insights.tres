@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://jexgnh4du6ee"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_0pidj"]
+[ext_resource type="Texture2D" uid="uid://bx2w4jkxvlpal" path="res://assets/icons/skills/ci_selected.png" id="2_s2wmc"]
+[ext_resource type="Texture2D" uid="uid://bvcqfxjrsdcmo" path="res://assets/icons/skills/ci_similar.png" id="3_u6np5"]
+[ext_resource type="Texture2D" uid="uid://bqxxgctgn06da" path="res://assets/icons/skills/ci_unselected.png" id="4_hr6qn"]
+
+[resource]
+script = ExtResource("1_0pidj")
+id = &"critical_insights"
+display_name = "Critical Insights"
+unselected_icon = ExtResource("4_hr6qn")
+selected_icon = ExtResource("2_s2wmc")
+similar_icon = ExtResource("3_u6np5")
+rank_bonuses = Dictionary[int, StringName]({
+0: &"ci_1",
+1: &"ci_2",
+2: &"ci_3"
+})

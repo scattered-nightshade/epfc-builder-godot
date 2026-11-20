@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://j230uoj8vjfp"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_67oba"]
+[ext_resource type="Texture2D" uid="uid://dph6tkt1kp8b2" path="res://assets/icons/skills/ra_selected.png" id="2_tuau4"]
+[ext_resource type="Texture2D" uid="uid://cyo8w53ifbog7" path="res://assets/icons/skills/ra_similar.png" id="3_mx20d"]
+[ext_resource type="Texture2D" uid="uid://chbm3oc5ta226" path="res://assets/icons/skills/ra_unselected.png" id="4_fl0s8"]
+
+[resource]
+script = ExtResource("1_67oba")
+id = "ra"
+display_name = "Remote Access"
+major_skill = true
+unselected_icon = ExtResource("4_fl0s8")
+selected_icon = ExtResource("2_tuau4")
+similar_icon = ExtResource("3_mx20d")

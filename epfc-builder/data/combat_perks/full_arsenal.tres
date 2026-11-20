@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://c06qlstpsbwgv"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_fwt2x"]
+[ext_resource type="Texture2D" uid="uid://ckw6ueyim4ny2" path="res://assets/icons/combat/fa_selected.png" id="2_uon8q"]
+[ext_resource type="Texture2D" uid="uid://e37j3yxjk2eb" path="res://assets/icons/combat/fa_unselected.png" id="3_g2s7u"]
+[ext_resource type="Texture2D" uid="uid://dggdyi3odsw1p" path="res://assets/icons/combat/fa_similar.png" id="3_qeo5i"]
+
+[resource]
+script = ExtResource("1_fwt2x")
+id = &"full_arsenal"
+display_name = "Full Arsenal"
+unselected_icon = ExtResource("3_g2s7u")
+selected_icon = ExtResource("2_uon8q")
+similar_icon = ExtResource("3_qeo5i")

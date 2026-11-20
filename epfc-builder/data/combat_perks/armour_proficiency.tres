@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://cwhqcddfo40lx"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_ks0pt"]
+[ext_resource type="Texture2D" uid="uid://cu03twtiqw2jd" path="res://assets/icons/combat/arp_selected.png" id="2_r24fc"]
+[ext_resource type="Texture2D" uid="uid://ciy52nt6s8v5f" path="res://assets/icons/combat/arp_unselected.png" id="3_0qaiv"]
+[ext_resource type="Texture2D" uid="uid://tsans3ljsnyo" path="res://assets/icons/combat/arp_similar.png" id="3_56nej"]
+
+[resource]
+script = ExtResource("1_ks0pt")
+id = &"armour_proficiency"
+display_name = "Armour Proficiency"
+unselected_icon = ExtResource("3_0qaiv")
+selected_icon = ExtResource("2_r24fc")
+similar_icon = ExtResource("3_56nej")

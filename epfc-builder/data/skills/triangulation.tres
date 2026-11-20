@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://croknkr3prmdf"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_163q8"]
+[ext_resource type="Texture2D" uid="uid://1mg8u5lmi1yi" path="res://assets/icons/skills/trig_selected.png" id="2_im5dc"]
+[ext_resource type="Texture2D" uid="uid://cglttaujnn1n2" path="res://assets/icons/skills/trig_similar.png" id="3_p2mmv"]
+[ext_resource type="Texture2D" uid="uid://bd8ut7mhxkvyi" path="res://assets/icons/skills/trig_unselected.png" id="4_ik1gk"]
+
+[resource]
+script = ExtResource("1_163q8")
+id = "trig"
+display_name = "Triangulation"
+major_skill = true
+unselected_icon = ExtResource("4_ik1gk")
+selected_icon = ExtResource("2_im5dc")
+similar_icon = ExtResource("3_p2mmv")

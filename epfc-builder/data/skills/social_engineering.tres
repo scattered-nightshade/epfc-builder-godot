@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://boq2wub0enad4"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_n5hb3"]
+[ext_resource type="Texture2D" uid="uid://bda1qqlndkik7" path="res://assets/icons/skills/se_selected.png" id="2_5dfhc"]
+[ext_resource type="Texture2D" uid="uid://cbvhlvcgaaxi7" path="res://assets/icons/skills/se_similar.png" id="3_vv1yf"]
+[ext_resource type="Texture2D" uid="uid://cudqy00cws80a" path="res://assets/icons/skills/se_unselected.png" id="4_c1r88"]
+
+[resource]
+script = ExtResource("1_n5hb3")
+id = "se"
+display_name = "Social Engineering"
+major_skill = true
+unselected_icon = ExtResource("4_c1r88")
+selected_icon = ExtResource("2_5dfhc")
+similar_icon = ExtResource("3_vv1yf")

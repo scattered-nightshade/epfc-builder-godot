@@ -1,0 +1,279 @@
+[gd_resource type="Resource" script_class="CombatTreeResource" format=3 uid="uid://i7syi84btuqp"]
+
+[ext_resource type="Script" uid="uid://7k4jq05li0f4" path="res://data/definitions/combat_node_resource.gd" id="1_agmaq"]
+[ext_resource type="Script" uid="uid://0rmdqhoqjdw0" path="res://data/definitions/combat_tree_resource.gd" id="2_p0uo4"]
+[ext_resource type="Resource" uid="uid://blynvqbfws6mf" path="res://data/combat_perks/mobile_attacker.tres" id="2_x7veo"]
+[ext_resource type="Resource" uid="uid://cwhqcddfo40lx" path="res://data/combat_perks/armour_proficiency.tres" id="3_pv8au"]
+[ext_resource type="Resource" uid="uid://dfqacgqf4c4q7" path="res://data/combat_perks/reinforcement.tres" id="4_ymda3"]
+[ext_resource type="Resource" uid="uid://cfw2pcmfrvpjj" path="res://data/combat_perks/handling_proficiency.tres" id="5_yeq8i"]
+[ext_resource type="Resource" uid="uid://x7einsoep47n" path="res://data/combat_perks/ammo_economy.tres" id="6_7kgq4"]
+[ext_resource type="Resource" uid="uid://b55bo4n0mglfd" path="res://data/combat_perks/scavenger.tres" id="7_66tx8"]
+[ext_resource type="Resource" uid="uid://kibm6qfgr54c" path="res://data/combat_perks/ammo_reserves.tres" id="8_bd0wu"]
+[ext_resource type="Resource" uid="uid://c3a2u81iwal50" path="res://data/combat_perks/blast_radius.tres" id="9_fxgl7"]
+[ext_resource type="Resource" uid="uid://lsbx6gi86kaa" path="res://data/combat_perks/lucky_shot.tres" id="10_xjqg7"]
+[ext_resource type="Resource" uid="uid://bckgjt6vd6t7b" path="res://data/combat_perks/vitality.tres" id="11_xvq75"]
+[ext_resource type="Resource" uid="uid://bwipne6kjojtp" path="res://data/combat_perks/hard_target.tres" id="12_ddknq"]
+[ext_resource type="Resource" uid="uid://bgidxe4f4eyll" path="res://data/combat_perks/executioner.tres" id="13_ejv7s"]
+[ext_resource type="Resource" uid="uid://cisha8gwwt30g" path="res://data/combat_perks/vital_targets.tres" id="14_dmdvq"]
+[ext_resource type="Resource" uid="uid://csl7fn4gn71g3" path="res://data/combat_perks/ordnance_supply.tres" id="15_55hqd"]
+[ext_resource type="Resource" uid="uid://boocrbyg1mypm" path="res://data/combat_perks/refined_composition.tres" id="16_a38ud"]
+[ext_resource type="Resource" uid="uid://bgn1u1qfqjs0b" path="res://data/combat_perks/fire_control.tres" id="17_2yjut"]
+[ext_resource type="Resource" uid="uid://bwss1ek70d5p4" path="res://data/combat_perks/undertaker.tres" id="18_m2586"]
+[ext_resource type="Resource" uid="uid://85qn0ydtqyl3" path="res://data/combat_perks/weapon_of_choice.tres" id="19_eq8cj"]
+[ext_resource type="Resource" uid="uid://c06qlstpsbwgv" path="res://data/combat_perks/full_arsenal.tres" id="20_ibh3q"]
+[ext_resource type="Resource" uid="uid://cr67hmw7usosy" path="res://data/combat_perks/gunsmith.tres" id="21_kdkhv"]
+[ext_resource type="Resource" uid="uid://bet7w6j1bbuhb" path="res://data/combat_perks/reaper.tres" id="22_jol1n"]
+[ext_resource type="Resource" uid="uid://r6xvub2gnmw4" path="res://data/combat_perks/tactical_coordination.tres" id="23_55lvt"]
+[ext_resource type="Resource" uid="uid://ds0gd7mwls41x" path="res://data/combat_perks/coup_de_grace.tres" id="24_vqexs"]
+[ext_resource type="Resource" uid="uid://q5121u00ging" path="res://data/combat_perks/critical_strike.tres" id="25_a8u5x"]
+
+[sub_resource type="Resource" id="Resource_agmaq"]
+resource_name = "0 Mobile Attacker (Tier 1)"
+script = ExtResource("1_agmaq")
+skill = ExtResource("2_x7veo")
+position = Vector2(-600, 225)
+
+[sub_resource type="Resource" id="Resource_x7veo"]
+resource_name = "1 Armour Proficiency (Tier 1)"
+script = ExtResource("1_agmaq")
+mutual_exclusivity = Array[int]([2])
+id = 1
+skill = ExtResource("3_pv8au")
+position = Vector2(-450, 225)
+
+[sub_resource type="Resource" id="Resource_pv8au"]
+resource_name = "2 Reinforcement (Tier 1)"
+script = ExtResource("1_agmaq")
+mutual_exclusivity = Array[int]([1])
+id = 2
+skill = ExtResource("4_ymda3")
+position = Vector2(-300, 225)
+
+[sub_resource type="Resource" id="Resource_ymda3"]
+resource_name = "3 Handling Proficiency (Tier 1)"
+script = ExtResource("1_agmaq")
+id = 3
+skill = ExtResource("5_yeq8i")
+position = Vector2(-150, 225)
+
+[sub_resource type="Resource" id="Resource_yeq8i"]
+resource_name = "4 Ammo Economy (Tier 1)"
+script = ExtResource("1_agmaq")
+mutual_exclusivity = Array[int]([5])
+id = 4
+skill = ExtResource("6_7kgq4")
+position = Vector2(0, 225)
+
+[sub_resource type="Resource" id="Resource_7kgq4"]
+resource_name = "5 Scavenger (Tier 1)"
+script = ExtResource("1_agmaq")
+mutual_exclusivity = Array[int]([4])
+id = 5
+skill = ExtResource("7_66tx8")
+position = Vector2(150, 225)
+
+[sub_resource type="Resource" id="Resource_66tx8"]
+resource_name = "6 Ammo Reserves (Tier 1)"
+script = ExtResource("1_agmaq")
+id = 6
+skill = ExtResource("8_bd0wu")
+position = Vector2(300, 225)
+
+[sub_resource type="Resource" id="Resource_bd0wu"]
+resource_name = "7 Blast Radius (Tier 1)"
+script = ExtResource("1_agmaq")
+id = 7
+skill = ExtResource("9_fxgl7")
+position = Vector2(450, 225)
+
+[sub_resource type="Resource" id="Resource_fxgl7"]
+resource_name = "8 Lucky Shot (Tier 1)"
+script = ExtResource("1_agmaq")
+id = 8
+skill = ExtResource("10_xjqg7")
+position = Vector2(600, 225)
+
+[sub_resource type="Resource" id="Resource_xjqg7"]
+resource_name = "9 Vitality (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([10])
+id = 9
+skill = ExtResource("11_xvq75")
+position = Vector2(-525, 75)
+
+[sub_resource type="Resource" id="Resource_xvq75"]
+resource_name = "10 Hard Target (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([9])
+id = 10
+skill = ExtResource("12_ddknq")
+position = Vector2(-375, 75)
+
+[sub_resource type="Resource" id="Resource_ddknq"]
+resource_name = "11 Executioner (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([12])
+id = 11
+skill = ExtResource("13_ejv7s")
+position = Vector2(-225, 75)
+
+[sub_resource type="Resource" id="Resource_ejv7s"]
+resource_name = "12 Vital Targets (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([11])
+id = 12
+skill = ExtResource("14_dmdvq")
+position = Vector2(-75, 75)
+
+[sub_resource type="Resource" id="Resource_dmdvq"]
+resource_name = "13 Ordnance Supply (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([14])
+id = 13
+skill = ExtResource("15_55hqd")
+position = Vector2(75, 75)
+
+[sub_resource type="Resource" id="Resource_55hqd"]
+resource_name = "14 Refined Composition (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+mutual_exclusivity = Array[int]([13])
+id = 14
+skill = ExtResource("16_a38ud")
+position = Vector2(225, 75)
+
+[sub_resource type="Resource" id="Resource_a38ud"]
+resource_name = "15 Fire Control (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+id = 15
+skill = ExtResource("17_2yjut")
+position = Vector2(375, 75)
+
+[sub_resource type="Resource" id="Resource_2yjut"]
+resource_name = "16 Undertaker (Tier 2)"
+script = ExtResource("1_agmaq")
+tier = 2
+id = 16
+skill = ExtResource("18_m2586")
+position = Vector2(525, 75)
+
+[sub_resource type="Resource" id="Resource_m2586"]
+resource_name = "17 Vitality (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+mutual_exclusivity = Array[int]([18])
+id = 17
+skill = ExtResource("11_xvq75")
+position = Vector2(-450, -75)
+
+[sub_resource type="Resource" id="Resource_eq8cj"]
+resource_name = "18 Reinforcement (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+mutual_exclusivity = Array[int]([17])
+id = 18
+skill = ExtResource("4_ymda3")
+position = Vector2(-300, -75)
+
+[sub_resource type="Resource" id="Resource_ibh3q"]
+resource_name = "19 Weapon of Choice (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+mutual_exclusivity = Array[int]([20])
+id = 19
+skill = ExtResource("19_eq8cj")
+position = Vector2(-150, -75)
+
+[sub_resource type="Resource" id="Resource_kdkhv"]
+resource_name = "20 Full Arsenal (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+mutual_exclusivity = Array[int]([19])
+id = 20
+skill = ExtResource("20_ibh3q")
+position = Vector2(0, -75)
+
+[sub_resource type="Resource" id="Resource_jol1n"]
+resource_name = "21 Gunsmith (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+id = 21
+skill = ExtResource("21_kdkhv")
+position = Vector2(150, -75)
+
+[sub_resource type="Resource" id="Resource_55lvt"]
+resource_name = "22 Reaper (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+id = 22
+skill = ExtResource("22_jol1n")
+position = Vector2(300, -75)
+
+[sub_resource type="Resource" id="Resource_vqexs"]
+resource_name = "23 Ammo Reserves (Tier 3)"
+script = ExtResource("1_agmaq")
+tier = 3
+id = 23
+skill = ExtResource("8_bd0wu")
+position = Vector2(450, -75)
+
+[sub_resource type="Resource" id="Resource_0g2da"]
+resource_name = "28 Vitality (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+mutual_exclusivity = Array[int]([24])
+id = 28
+skill = ExtResource("11_xvq75")
+position = Vector2(225, -225)
+
+[sub_resource type="Resource" id="Resource_a8u5x"]
+resource_name = "24 Vital Targets (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+mutual_exclusivity = Array[int]([28])
+id = 24
+skill = ExtResource("14_dmdvq")
+position = Vector2(-375, -225)
+
+[sub_resource type="Resource" id="Resource_q5d7b"]
+resource_name = "25 Tactical Coordination (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+id = 25
+skill = ExtResource("23_55lvt")
+position = Vector2(-225, -225)
+
+[sub_resource type="Resource" id="Resource_dd7h2"]
+resource_name = "26 Ordnance Supply (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+id = 26
+skill = ExtResource("15_55hqd")
+position = Vector2(-75, -225)
+
+[sub_resource type="Resource" id="Resource_b0emu"]
+resource_name = "27 Coup de Grace (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+id = 27
+skill = ExtResource("24_vqexs")
+position = Vector2(75, -225)
+
+[sub_resource type="Resource" id="Resource_null4"]
+resource_name = "29 Critical Strike (Tier 4)"
+script = ExtResource("1_agmaq")
+tier = 4
+id = 29
+skill = ExtResource("25_a8u5x")
+position = Vector2(375, -225)
+
+[resource]
+script = ExtResource("2_p0uo4")
+nodes = Array[ExtResource("1_agmaq")]([SubResource("Resource_agmaq"), SubResource("Resource_x7veo"), SubResource("Resource_pv8au"), SubResource("Resource_ymda3"), SubResource("Resource_yeq8i"), SubResource("Resource_7kgq4"), SubResource("Resource_66tx8"), SubResource("Resource_bd0wu"), SubResource("Resource_fxgl7"), SubResource("Resource_xjqg7"), SubResource("Resource_xvq75"), SubResource("Resource_ddknq"), SubResource("Resource_ejv7s"), SubResource("Resource_dmdvq"), SubResource("Resource_55hqd"), SubResource("Resource_a38ud"), SubResource("Resource_2yjut"), SubResource("Resource_m2586"), SubResource("Resource_eq8cj"), SubResource("Resource_ibh3q"), SubResource("Resource_kdkhv"), SubResource("Resource_jol1n"), SubResource("Resource_55lvt"), SubResource("Resource_vqexs"), SubResource("Resource_0g2da"), SubResource("Resource_a8u5x"), SubResource("Resource_q5d7b"), SubResource("Resource_dd7h2"), SubResource("Resource_b0emu"), SubResource("Resource_null4")])
+metadata/_custom_type_script = "uid://0rmdqhoqjdw0"

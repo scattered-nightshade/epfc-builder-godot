@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://bac0whjo84wbg"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_4wgi2"]
+[ext_resource type="Texture2D" uid="uid://cf05k2phnhcsp" path="res://assets/icons/skills/trav_selected.png" id="2_d5unv"]
+[ext_resource type="Texture2D" uid="uid://m8ws8l8rie4v" path="res://assets/icons/skills/trav_similar.png" id="3_nj32s"]
+[ext_resource type="Texture2D" uid="uid://cs78bhwgm7d2g" path="res://assets/icons/skills/trav_unselected.png" id="4_tykb8"]
+
+[resource]
+script = ExtResource("1_4wgi2")
+id = "trav"
+display_name = "Traversal"
+major_skill = true
+unselected_icon = ExtResource("4_tykb8")
+selected_icon = ExtResource("2_d5unv")
+similar_icon = ExtResource("3_nj32s")

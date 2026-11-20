@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://cb7g3hdo6ilv6"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_t4yxt"]
+[ext_resource type="Texture2D" uid="uid://dlvsngig4pm6k" path="res://assets/icons/skills/agil_selected.png" id="2_6au6l"]
+[ext_resource type="Texture2D" uid="uid://cqatm1blvj2cj" path="res://assets/icons/skills/agil_similar.png" id="3_hwv24"]
+[ext_resource type="Texture2D" uid="uid://b5w72funq6kof" path="res://assets/icons/skills/agil_unselected.png" id="4_ge0h6"]
+
+[resource]
+script = ExtResource("1_t4yxt")
+id = &"agility"
+display_name = "Agility"
+description = "- Rank 1: Crouched movement and sprinting are faster by 10%
+- Rank 2: Multiplies Stamina regeneration speed by +50%"
+major_skill = true
+unselected_icon = ExtResource("4_ge0h6")
+selected_icon = ExtResource("2_6au6l")
+similar_icon = ExtResource("3_hwv24")

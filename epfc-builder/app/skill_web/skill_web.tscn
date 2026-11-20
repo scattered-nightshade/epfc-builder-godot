@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://clfncg2uxipmt"]
+
+[ext_resource type="Script" uid="uid://b36dc7croj34s" path="res://app/skill_web/skill_web.gd" id="1_t4a06"]
+[ext_resource type="Script" uid="uid://1pcv3nakuqa0" path="res://app/skill_web/skill_web_connections.gd" id="2_0p4or"]
+
+[node name="SkillWeb" type="Control" unique_id=310057034]
+layout_mode = 3
+anchors_preset = 0
+offset_transform_enabled = true
+offset_transform_visual_only = false
+mouse_filter = 2
+script = ExtResource("1_t4a06")
+
+[node name="Connections" type="Control" parent="." unique_id=1151370290]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -1500.0
+offset_top = -1500.0
+offset_right = 1500.0
+offset_bottom = 1500.0
+mouse_filter = 2
+script = ExtResource("2_0p4or")

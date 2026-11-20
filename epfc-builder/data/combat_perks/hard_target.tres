@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CombatPerkResource" format=3 uid="uid://bwipne6kjojtp"]
+
+[ext_resource type="Script" uid="uid://cbvhqfuyo5q4o" path="res://data/definitions/combat_perk_resource.gd" id="1_dcltb"]
+[ext_resource type="Texture2D" uid="uid://darofog7tlk7e" path="res://assets/icons/combat/ht_selected.png" id="2_808ld"]
+[ext_resource type="Texture2D" uid="uid://bsnm3dwdhp0ix" path="res://assets/icons/combat/ht_unselected.png" id="3_5e1hy"]
+[ext_resource type="Texture2D" uid="uid://bygoqujyt30os" path="res://assets/icons/combat/ht_similar.png" id="3_kve25"]
+
+[resource]
+script = ExtResource("1_dcltb")
+id = &"hard_target"
+display_name = "Hard Target"
+unselected_icon = ExtResource("3_5e1hy")
+selected_icon = ExtResource("2_808ld")
+similar_icon = ExtResource("3_kve25")

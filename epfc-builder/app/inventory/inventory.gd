@@ -1,0 +1,3 @@
+class_name Inventory extends Control
+
+# Eventually...

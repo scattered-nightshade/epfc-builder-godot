@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://cawo7fikpbpur"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_0hwur"]
+[ext_resource type="Texture2D" uid="uid://cuepo166xiyoj" path="res://assets/icons/skills/aw_selected.png" id="2_65knm"]
+[ext_resource type="Texture2D" uid="uid://djiryqbwajmus" path="res://assets/icons/skills/aw_similar.png" id="3_f1iom"]
+[ext_resource type="Texture2D" uid="uid://qapfonluket4" path="res://assets/icons/skills/aw_unselected.png" id="4_0holr"]
+
+[resource]
+script = ExtResource("1_0hwur")
+id = &"awareness"
+display_name = "Awareness"
+major_skill = true
+unselected_icon = ExtResource("4_0holr")
+selected_icon = ExtResource("2_65knm")
+similar_icon = ExtResource("3_f1iom")
+rank_bonuses = Dictionary[int, StringName]({
+0: &"awareness_1",
+1: &"awareness_2",
+2: &"awareness_3"
+})

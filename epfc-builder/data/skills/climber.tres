@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://bpk1gna1sqofy"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_d2yyh"]
+[ext_resource type="Texture2D" uid="uid://bcg1ogjy5fc61" path="res://assets/icons/skills/cl_selected.png" id="2_3ohng"]
+[ext_resource type="Texture2D" uid="uid://cby5bucbkh21" path="res://assets/icons/skills/cl_similar.png" id="3_4j52s"]
+[ext_resource type="Texture2D" uid="uid://d0lmqmtacdt5y" path="res://assets/icons/skills/cl_unselected.png" id="4_kr48c"]
+
+[resource]
+script = ExtResource("1_d2yyh")
+id = &"climber"
+display_name = "Climber"
+major_skill = true
+unselected_icon = ExtResource("4_kr48c")
+selected_icon = ExtResource("2_3ohng")
+similar_icon = ExtResource("3_4j52s")

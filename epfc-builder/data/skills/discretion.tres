@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://cfksjvficda75"]
+
+[ext_resource type="Script" uid="uid://cf6l8eakfy70l" path="res://data/definitions/skill_resource.gd" id="1_1gu8v"]
+[ext_resource type="Texture2D" uid="uid://bme2efdsaide5" path="res://assets/icons/skills/dis_selected.png" id="2_lsbrm"]
+[ext_resource type="Texture2D" uid="uid://bpv6ymvavwuxk" path="res://assets/icons/skills/dis_similar.png" id="3_mwu3e"]
+[ext_resource type="Texture2D" uid="uid://cqxshub4bx6xd" path="res://assets/icons/skills/dis_unselected.png" id="4_fq704"]
+
+[resource]
+script = ExtResource("1_1gu8v")
+id = &"discretion"
+display_name = "Discretion"
+description = "Reduces the detection speed of the minor suspicion and criminal suspicion statuses by 5% per rank (except when carrying a body)."
+unselected_icon = ExtResource("4_fq704")
+selected_icon = ExtResource("2_lsbrm")
+similar_icon = ExtResource("3_mwu3e")
+stat_bonuses = Dictionary[StringName, float]({
+&"discretion_criminal_suspicion_detection_speed_reduction": 5.0,
+&"discretion_minor_suspicion_detection_speed_reduction": 5.0
+})
