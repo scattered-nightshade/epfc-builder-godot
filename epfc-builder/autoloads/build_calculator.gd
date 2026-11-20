@@ -64,6 +64,8 @@ const BASE_STAMINA: int = 100
 const BASE_SPEED_WALKING: float = 14
 const BASE_SPEED_SPRINTING: float = 22
 const BASE_SPEED_CROUCH_WALK: float = 9.5
+const BASE_SPEED_CROUCH_SPRINTING: float = 14.7
+const BASE_SPEED_SLIDING: float = 22
 #endregion
 
 #region Detection
@@ -86,10 +88,16 @@ const AGILITY_1_CROUCH_WALK_SPEED: float = 10.5
 
 const CONDITIONING_STAMINA_INCREASE: int = 6
 
+const HARD_TARGET_DODGE_VALUE: float = 0.20
+const LOW_PROFILE_DODGE_INCREASE: float = 0.03
+
 const BACKPACK_WEIGHT_REDUCTION: float = 0.8
 const TACTICAL_PACK_WEIGHT_REDUCTION: float = 0.8
 
 const ENCUMBRANCE_DODGE_REDUCTION: float = 0.0208
+const ENCUMBRANCE_SPEED_LOW_REDUCTION: float = 0.01
+const ENCUMBRANCE_SPEED_HIGH_REDUCTION: float = 0.02375
+const ENCUMBRANCE_BRUTE_STRENGTH_1_PENALTY_REDUCTION: float = 0.25
 
 #region Detection
 const DETECTION_SPEED_RECRUIT: float = 0.5
@@ -138,6 +146,47 @@ func get_raw_weight() -> float:
 func get_encumbrance_dodge_mult() -> float:
 	var excess_weight: float = maxf(get_raw_weight() - BREAKPOINT_ENCUMBRANCE_DODGE_MULT, 0.0)
 	return maxf(1.0 - excess_weight * ENCUMBRANCE_DODGE_REDUCTION, 0.0)
+
+func get_encumbrance_speed_mult() -> float:
+	var weight: float = get_weight()
+	
+	var excess_weight_low: float = clampf(weight - BREAKPOINT_ENCUMBRANCE_SPEED_MULT_LOW, 0.0, BREAKPOINT_ENCUMBRANCE_SPEED_MULT_HIGH - BREAKPOINT_ENCUMBRANCE_SPEED_MULT_LOW)
+	var excess_weight_high: float = clampf(weight - BREAKPOINT_ENCUMBRANCE_SPEED_MULT_HIGH, 0.0, 8)
+	
+	var penalty_low: float = excess_weight_low * ENCUMBRANCE_SPEED_LOW_REDUCTION
+	var penalty_high: float = excess_weight_high * ENCUMBRANCE_SPEED_HIGH_REDUCTION
+	
+	var penalty: float = penalty_low + penalty_high
+	
+	if Build.count_group(SKILL_BRUTE_STRENGTH) >= 1:
+		penalty *= 1.0 - ENCUMBRANCE_BRUTE_STRENGTH_1_PENALTY_REDUCTION
+	
+	return 1.0 - penalty
+
+func get_walking_speed() -> float:
+	return BASE_SPEED_WALKING * get_encumbrance_speed_mult()
+
+func get_sprinting_speed() -> float:
+	if Build.count_group(SKILL_AGILITY) >= 1:
+		return AGILITY_1_SPRINT_SPEED * get_encumbrance_speed_mult()
+	
+	return BASE_SPEED_SPRINTING * get_encumbrance_speed_mult()
+
+func get_crouch_walking_speed() -> float:
+	if Build.count_group(SKILL_AGILITY) >= 1:
+		return AGILITY_1_CROUCH_WALK_SPEED * get_encumbrance_speed_mult()
+	
+	return BASE_SPEED_CROUCH_WALK * get_encumbrance_speed_mult()
+
+func get_crouch_sprinting_speed() -> float:
+	return BASE_SPEED_CROUCH_SPRINTING * get_encumbrance_speed_mult()
+
+func get_sliding_speed() -> float:
+	if Build.count_group(SKILL_AGILITY) >= 1:
+		return AGILITY_1_SLIDING_SPEED * get_encumbrance_speed_mult()
+	
+	return BASE_SPEED_SLIDING * get_encumbrance_speed_mult()
+
 
 func get_dodge_crouching() -> float:
 	var lp_dodge: float = Build.count_group(SKILL_LOW_PROFILE) * 0.03

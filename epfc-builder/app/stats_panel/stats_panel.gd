@@ -35,11 +35,11 @@ func populate() -> void:
 	stamina_value.text = "%d" % BuildCalculator.get_stamina()
 	weight_value.text = ""
 	
-	walking_value.text = ""
-	sprinting_value.text = ""
-	crouch_walking_value.text = ""
-	crouch_sprinting_value.text = ""
-	sliding_value.text = ""
+	walking_value.text = "%.1f studs/s" % BuildCalculator.get_walking_speed()
+	sprinting_value.text = "%.1f studs/s" % BuildCalculator.get_sprinting_speed()
+	crouch_walking_value.text = "%.1f studs/s" % BuildCalculator.get_crouch_walking_speed()
+	crouch_sprinting_value.text = "%.1f studs/s" % BuildCalculator.get_crouch_sprinting_speed()
+	sliding_value.text = "%.1f studs/s" % BuildCalculator.get_sliding_speed()
 	
 	dodge_crouching_value.text = "%.1f%%" % (BuildCalculator.get_dodge_crouching() * 100)
 	dodge_sprinting_value.text = "%.1f%%" % (BuildCalculator.get_dodge_sprinting() * 100)
