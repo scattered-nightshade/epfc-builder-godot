@@ -469,6 +469,18 @@ size_flags_horizontal = 3
 text = "0s"
 horizontal_alignment = 2
 
+[node name="DetectionCamerasTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=850084238]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cameras"
+
+[node name="DetectionCamerasValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1747978588]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0s"
+horizontal_alignment = 2
+
 [node name="DetectionRangeTable" type="MarginContainer" parent="ScrollRect/VBoxContainer" unique_id=1515711732]
 layout_mode = 2
 theme_override_constants/margin_left = 5

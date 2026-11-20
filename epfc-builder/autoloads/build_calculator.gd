@@ -71,11 +71,16 @@ const BASE_SPEED_SLIDING: float = 22
 #region Detection
 const BASE_DETECTION_TIME: float = 1.56
 
+const BASE_DETECTION_MULT_CRIMINALLY_SUSPICIOUS: float = 1.25
+const BASE_DETECTION_MULT_ARMED: float = 1.5
+const BASE_DETECTION_MULT_DISGUISED: float = 0.55
+
 const BASE_DETECTION_RANGE: float = 50
 const BASE_DETECTION_RANGE_DISGUISED: float = 22.5
 const BASE_DETECTION_RANGE_PICKPOCKETING: float = 20
 const BASE_DETECTION_RANGE_PICKPOCKETING_3: float = 10
 const BASE_DETECTION_RANGE_ENFORCER_PICKPOCKETING: float = 50
+
 #endregion
 
 const BASE_LOCKPICKING_SPEED: float = 100
@@ -89,6 +94,10 @@ const AGILITY_1_SLIDING_SPEED: float = 24
 const AGILITY_1_CROUCH_WALK_SPEED: float = 10.5
 
 const CONDITIONING_STAMINA_INCREASE: int = 6
+
+const FAST_HANDS_LOCKPICKING_SPEED_INCREASE: float = 5
+const APPLIED_FORCE_SPEED_INCREASE: float = 5
+const TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE: float = 5
 
 const HARD_TARGET_DODGE_VALUE: float = 0.20
 const LOW_PROFILE_DODGE_INCREASE: float = 0.03
@@ -119,6 +128,11 @@ const DETECTION_SPEED_DISGUISED_MULT: float = 0.55
 const DETECTION_RANGE_BAG_MULT: float = 1.20
 const DETECTION_RANGE_SATCHEL_MULT: float = 1.10
 const DETECTION_RANGE_INCONSPICUOUS_2_MULT: float = 0.88
+
+const LOW_PROFILE_DETECTION_REDUCTION: float = 0.04
+const DISCRETION_DETECTION_REDUCTION: float = 0.05
+const MASQUERADE_DETECTION_REDUCTION: float = 0.03
+const SIGNAL_DISRUPTION_DETECTION_REDUCTION: float = 0.04
 #endregion
 
 #endregion
@@ -189,17 +203,6 @@ func get_sliding_speed() -> float:
 	
 	return BASE_SPEED_SLIDING * get_encumbrance_speed_mult()
 
-#These are set to 5 instead of 0.05 because of the loss of precision surrounding floats
-func get_lockpicking_speed() -> float:
-	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_FAST_HANDS) * 5
-
-func get_af_speed() -> float:
-	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_APPLIED_FORCE) * 5
-
-func get_rewire_speed() -> float:
-	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_TECHNICAL_EXPERT) * 5
-
-
 func get_dodge_crouching() -> float:
 	var lp_dodge: float = Build.count_group(SKILL_LOW_PROFILE) * 0.03
 	var ht_dodge: float = 0.0
@@ -214,3 +217,31 @@ func get_dodge_sprinting() -> float:
 		return 0.20
 	
 	return 0.0
+
+#These are set to 5 instead of 0.05 because of the loss of precision surrounding floats
+func get_lockpicking_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_FAST_HANDS) * FAST_HANDS_LOCKPICKING_SPEED_INCREASE)
+
+func get_af_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_APPLIED_FORCE) * APPLIED_FORCE_SPEED_INCREASE)
+
+func get_rewire_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_TECHNICAL_EXPERT) * TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE)
+
+func get_base_detection_time() -> float:
+	return BASE_DETECTION_TIME
+
+func get_crouched_detection_time() -> float:
+	return get_base_detection_time() / (1 - (Build.count_group(SKILL_LOW_PROFILE) * LOW_PROFILE_DETECTION_REDUCTION))
+
+func get_criminally_suspicious_detection_time() -> float:
+	return get_base_detection_time() / (BASE_DETECTION_MULT_CRIMINALLY_SUSPICIOUS * (1 - (Build.count_group(SKILL_DISCRETION) * DISCRETION_DETECTION_REDUCTION)))
+
+func get_armed_detection_time() -> float:
+	return get_base_detection_time() / BASE_DETECTION_MULT_ARMED
+
+func get_disguised_detection_time() -> float:
+	return get_base_detection_time() / (BASE_DETECTION_MULT_DISGUISED * (1 - (Build.count_group(SKILL_MASQUERADE) * MASQUERADE_DETECTION_REDUCTION)))
+
+func get_camera_detection_time() -> float:
+	return get_base_detection_time() / (1 - (Build.count_group(SKILL_SIGNAL_DISRUPTION) * SIGNAL_DISRUPTION_DETECTION_REDUCTION))
