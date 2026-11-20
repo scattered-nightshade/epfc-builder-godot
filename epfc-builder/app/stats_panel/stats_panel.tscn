@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cyh7nux4im0d4"]
 
 [ext_resource type="Script" uid="uid://duq6sebc4sg5w" path="res://app/stats_panel/stats_panel.gd" id="1_hk46d"]
+[ext_resource type="Script" uid="uid://buer5qqwvtkyn" path="res://app/stats_panel/table.gd" id="2_p67ue"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj63m"]
 bg_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
@@ -110,6 +111,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/SpeedTable" unique_id=2065300029]
 layout_mode = 2
@@ -127,6 +129,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/SpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=64343283]
 layout_mode = 2
+mouse_filter = 0
 text = "Speed"
 horizontal_alignment = 1
 
@@ -200,6 +203,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DodgeTable" unique_id=19850212]
 layout_mode = 2
@@ -217,6 +221,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DodgeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=579641948]
 layout_mode = 2
+mouse_filter = 0
 text = "Dodge"
 horizontal_alignment = 1
 
@@ -254,6 +259,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/ItemSpeedTable" unique_id=893846478]
 layout_mode = 2
@@ -271,6 +277,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/ItemSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=2014517168]
 layout_mode = 2
+mouse_filter = 0
 text = "Item Speed"
 horizontal_alignment = 1
 
@@ -320,6 +327,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/HackingTable" unique_id=2047951253]
 layout_mode = 2
@@ -328,13 +336,16 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_hk46d")
 [node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer" unique_id=275718566]
 layout_mode = 2
 theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer" unique_id=319423764]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/HackingTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=757451134]
 layout_mode = 2
+mouse_filter = 0
 text = "Hacking"
 horizontal_alignment = 1
 
@@ -372,6 +383,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable" unique_id=804767846]
 layout_mode = 2
@@ -380,13 +392,16 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_p67ue")
 [node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer" unique_id=942982709]
 layout_mode = 2
 theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer" unique_id=4886504]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DetectionSpeedTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=698583805]
 layout_mode = 2
+mouse_filter = 0
 text = "Detection Speed"
 horizontal_alignment = 1
 
@@ -460,6 +475,7 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+script = ExtResource("2_p67ue")
 
 [node name="PanelContainer" type="PanelContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable" unique_id=2010866797]
 layout_mode = 2
@@ -468,13 +484,16 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rv1xc")
 [node name="MarginContainer" type="MarginContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer" unique_id=1229309582]
 layout_mode = 2
 theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer" unique_id=1946059724]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer" unique_id=2088654375]
 layout_mode = 2
+mouse_filter = 0
 text = "Detection Distance"
 horizontal_alignment = 1
 
