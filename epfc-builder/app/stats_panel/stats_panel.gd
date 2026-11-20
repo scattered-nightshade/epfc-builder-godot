@@ -44,9 +44,10 @@ func populate() -> void:
 	dodge_crouching_value.text = "%.1f%%" % (BuildCalculator.get_dodge_crouching() * 100)
 	dodge_sprinting_value.text = "%.1f%%" % (BuildCalculator.get_dodge_sprinting() * 100)
 	
-	item_lockpicking_value.text = ""
-	item_af_value.text = ""
-	item_rewire_kit_value.text = ""
+	# See comment in build_calculator.gd as to why these arent multiplied by 100
+	item_lockpicking_value.text = "%d%%" % (BuildCalculator.get_lockpicking_speed())
+	item_af_value.text = "%d%%" % (BuildCalculator.get_af_speed())
+	item_rewire_kit_value.text = "%d%%" % (BuildCalculator.get_rewire_speed())
 	
 	hacking_speed_value.text = ""
 	hacking_resource_usage_value.text = ""

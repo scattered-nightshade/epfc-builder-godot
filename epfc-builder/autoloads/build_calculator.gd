@@ -78,6 +78,8 @@ const BASE_DETECTION_RANGE_PICKPOCKETING_3: float = 10
 const BASE_DETECTION_RANGE_ENFORCER_PICKPOCKETING: float = 50
 #endregion
 
+const BASE_LOCKPICKING_SPEED: float = 100
+
 #endregion
 
 #region Effects
@@ -186,6 +188,16 @@ func get_sliding_speed() -> float:
 		return AGILITY_1_SLIDING_SPEED * get_encumbrance_speed_mult()
 	
 	return BASE_SPEED_SLIDING * get_encumbrance_speed_mult()
+
+#These are set to 5 instead of 0.05 because of the loss of precision surrounding floats
+func get_lockpicking_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_FAST_HANDS) * 5
+
+func get_af_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_APPLIED_FORCE) * 5
+
+func get_rewire_speed() -> float:
+	return BASE_LOCKPICKING_SPEED + Build.count_group(SKILL_TECHNICAL_EXPERT) * 5
 
 
 func get_dodge_crouching() -> float:
