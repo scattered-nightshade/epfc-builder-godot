@@ -95,6 +95,7 @@ const AGILITY_1_CROUCH_WALK_SPEED: float = 10.5
 
 const CONDITIONING_STAMINA_INCREASE: int = 6
 
+#These are set to 5 instead of 0.05 because of the loss of precision surrounding floats
 const FAST_HANDS_LOCKPICKING_SPEED_INCREASE: float = 5
 const APPLIED_FORCE_SPEED_INCREASE: float = 5
 const TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE: float = 5
@@ -147,6 +148,8 @@ const BREAKPOINT_ENCUMBRANCE_SPEED_MULT_HIGH: int = 38
 
 #endregion
 
+#region
+
 func get_health() -> int:
 	return BASE_HEALTH
 
@@ -159,6 +162,7 @@ func get_weight() -> float:
 func get_raw_weight() -> float:
 	return 0
 
+#region encumbrance
 func get_encumbrance_dodge_mult() -> float:
 	var excess_weight: float = maxf(get_raw_weight() - BREAKPOINT_ENCUMBRANCE_DODGE_MULT, 0.0)
 	return maxf(1.0 - excess_weight * ENCUMBRANCE_DODGE_REDUCTION, 0.0)
@@ -178,7 +182,9 @@ func get_encumbrance_speed_mult() -> float:
 		penalty *= 1.0 - ENCUMBRANCE_BRUTE_STRENGTH_1_PENALTY_REDUCTION
 	
 	return 1.0 - penalty
+#endregion
 
+#region movement speed
 func get_walking_speed() -> float:
 	return BASE_SPEED_WALKING * get_encumbrance_speed_mult()
 
@@ -202,7 +208,9 @@ func get_sliding_speed() -> float:
 		return AGILITY_1_SLIDING_SPEED * get_encumbrance_speed_mult()
 	
 	return BASE_SPEED_SLIDING * get_encumbrance_speed_mult()
+#endregion
 
+#region dodge
 func get_dodge_crouching() -> float:
 	var lp_dodge: float = Build.count_group(SKILL_LOW_PROFILE) * 0.03
 	var ht_dodge: float = 0.0
@@ -217,8 +225,9 @@ func get_dodge_sprinting() -> float:
 		return 0.20
 	
 	return 0.0
+#endregion
 
-#These are set to 5 instead of 0.05 because of the loss of precision surrounding floats
+#region items
 func get_lockpicking_speed() -> float:
 	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_FAST_HANDS) * FAST_HANDS_LOCKPICKING_SPEED_INCREASE)
 
@@ -227,7 +236,9 @@ func get_af_speed() -> float:
 
 func get_rewire_speed() -> float:
 	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_TECHNICAL_EXPERT) * TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE)
+#endregion
 
+#region detection times
 func get_base_detection_time() -> float:
 	return BASE_DETECTION_TIME
 
@@ -245,3 +256,6 @@ func get_disguised_detection_time() -> float:
 
 func get_camera_detection_time() -> float:
 	return get_base_detection_time() / (1 - (Build.count_group(SKILL_SIGNAL_DISRUPTION) * SIGNAL_DISRUPTION_DETECTION_REDUCTION))
+#endregion
+
+#endregion
