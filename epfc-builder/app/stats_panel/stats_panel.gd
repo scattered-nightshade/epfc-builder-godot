@@ -28,7 +28,6 @@ class_name StatsPanel extends MarginContainer
 @onready var detection_speed_cameras_value: Label = %DetectionCamerasValue
 
 @onready var detection_distance_base_value: Label = %DetectionDistanceBaseValue
-@onready var detection_distance_crouched_value: Label = %DetectionDistanceCrouchedValue
 @onready var detection_distance_disguised_value: Label = %DetectionDistanceDisguisedValue
 @onready var detection_distance_pickpocketing_value: Label = %DetectionDistancePickpocketingValue
 
@@ -56,8 +55,8 @@ func populate() -> void:
 	item_af_value.text = "%d%%" % (BuildCalculator.get_af_speed())
 	item_rewire_kit_value.text = "%d%%" % (BuildCalculator.get_rewire_speed())
 	
-	hacking_speed_value.text = ""
-	hacking_resource_usage_value.text = ""
+	hacking_speed_value.text = "%.0f%%" % (BuildCalculator.get_hacking_speed() * 100)
+	hacking_resource_usage_value.text = "%.0f%%" % (BuildCalculator.get_hacking_resource_usage() * 100)
 	
 	detection_speed_base_value.text = "%.2fs" % BuildCalculator.get_base_detection_time()
 	detection_speed_crouched_value.text = "%.2fs" % BuildCalculator.get_crouched_detection_time()
@@ -66,7 +65,6 @@ func populate() -> void:
 	detection_speed_disguised_value.text = "%.2fs" % BuildCalculator.get_disguised_detection_time()
 	detection_speed_cameras_value.text = "%.2fs" % BuildCalculator.get_camera_detection_time()
 	
-	detection_distance_base_value.text = ""
-	detection_distance_crouched_value.text = ""
-	detection_distance_disguised_value.text = ""
-	detection_distance_pickpocketing_value.text = ""
+	detection_distance_base_value.text = "%d studs" % BuildCalculator.get_base_detection_range()
+	detection_distance_disguised_value.text = "%d studs" % BuildCalculator.get_disguised_detection_range()
+	detection_distance_pickpocketing_value.text = "%d studs" % BuildCalculator.get_pickpocketing_detection_range()

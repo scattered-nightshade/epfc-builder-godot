@@ -525,18 +525,6 @@ size_flags_horizontal = 3
 text = "0 studs"
 horizontal_alignment = 2
 
-[node name="DetectionDistanceCrouchedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1793725485]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Crouched"
-
-[node name="DetectionDistanceCrouchedValue" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=978144516]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-text = "0 studs"
-horizontal_alignment = 2
-
 [node name="DetectionDistanceDisguisedTitle" type="Label" parent="ScrollRect/VBoxContainer/DetectionRangeTable/PanelContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=2117900856]
 layout_mode = 2
 size_flags_horizontal = 3

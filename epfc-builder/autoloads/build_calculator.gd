@@ -57,7 +57,7 @@ const PERK_WEAPON_OF_CHOICE = preload("res://data/combat_perks/weapon_of_choice.
 
 #region Base Values
 
-const BASE_HEALTH: int    = 100
+const BASE_HEALTH: int = 100
 const BASE_STAMINA: int = 100
 
 #region Speed
@@ -84,6 +84,10 @@ const BASE_DETECTION_RANGE_ENFORCER_PICKPOCKETING: float = 50
 #endregion
 
 const BASE_LOCKPICKING_SPEED: float = 100
+const BASE_APPLIED_FORCE_SPEED: float = 100
+const BASE_REWIRE_SPEED: float = 100
+const BASE_HACKING_SPEED: float = 1.0
+const BASE_HACKING_RESOURCE_USAGE: float = 1.0
 
 #endregion
 
@@ -232,10 +236,20 @@ func get_lockpicking_speed() -> float:
 	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_FAST_HANDS) * FAST_HANDS_LOCKPICKING_SPEED_INCREASE)
 
 func get_af_speed() -> float:
-	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_APPLIED_FORCE) * APPLIED_FORCE_SPEED_INCREASE)
+	return BASE_APPLIED_FORCE_SPEED + (Build.count_group(SKILL_APPLIED_FORCE) * APPLIED_FORCE_SPEED_INCREASE)
 
 func get_rewire_speed() -> float:
-	return BASE_LOCKPICKING_SPEED + (Build.count_group(SKILL_TECHNICAL_EXPERT) * TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE)
+	return BASE_REWIRE_SPEED + (Build.count_group(SKILL_TECHNICAL_EXPERT) * TECHNICAL_EXPERT_REWIRE_SPEED_INCREASE)
+#endregion
+
+#region hacking
+
+func get_hacking_speed() -> float:
+	return BASE_HACKING_SPEED + (Build.count_group(SKILL_EFFICIENT_ALGORITHMS) * 0.05)
+
+func get_hacking_resource_usage() -> float:
+	return BASE_HACKING_RESOURCE_USAGE * (1 - (Build.count_group(SKILL_CRITICAL_INSIGHTS) * 0.05))
+
 #endregion
 
 #region detection times
@@ -256,6 +270,32 @@ func get_disguised_detection_time() -> float:
 
 func get_camera_detection_time() -> float:
 	return get_base_detection_time() / (1 - (Build.count_group(SKILL_SIGNAL_DISRUPTION) * SIGNAL_DISRUPTION_DETECTION_REDUCTION))
+#endregion
+
+#region detection distances
+
+func get_detection_range_mult() -> float:
+	var detection_mult: float = 1.0
+	
+	if Build.count_group(SKILL_INCONSPICUOUS) >= 2:
+		detection_mult = DETECTION_RANGE_INCONSPICUOUS_2_MULT
+	
+	return detection_mult
+
+func get_base_detection_range() -> float:
+	return BASE_DETECTION_RANGE * get_detection_range_mult()
+
+func get_disguised_detection_range() -> float:
+	return BASE_DETECTION_RANGE_DISGUISED * get_detection_range_mult()
+
+func get_pickpocketing_detection_range() -> float:
+	var detection_range: float = BASE_DETECTION_RANGE_PICKPOCKETING
+	
+	if Build.count_group(SKILL_PICKPOCKET) >= 3:
+		detection_range = BASE_DETECTION_RANGE_PICKPOCKETING_3
+	
+	return detection_range * get_detection_range_mult()
+
 #endregion
 
 #endregion
